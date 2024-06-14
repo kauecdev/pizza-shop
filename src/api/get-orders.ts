@@ -1,4 +1,4 @@
-import { OrderStatus } from '@/components/order-status'
+import { OrderStatusType } from '@/components/order-status'
 import { api } from '@/lib/axios'
 
 export interface GetOrdersQuery {
@@ -12,7 +12,7 @@ export interface GetOrdersResponse {
   orders: {
     orderId: string
     createdAt: string
-    status: OrderStatus
+    status: OrderStatusType
     customerName: string
     total: number
   }[]
