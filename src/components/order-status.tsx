@@ -19,18 +19,19 @@ const orderStatusLabelMap: Record<OrderStatusType, string> = {
 
 const orderStatusColorMap: Record<OrderStatusType, string> = {
   pending: 'bg-slate-400',
-  canceled: 'bg-rose-400',
-  delivered: 'bg-emerald-400',
-  delivering: 'bg-amber-400',
-  processing: 'bg-amber-400',
+  canceled: 'bg-rose-500',
+  delivered: 'bg-emerald-500',
+  delivering: 'bg-amber-500',
+  processing: 'bg-amber-500',
 }
 
 export function OrderStatus({ status }: OrderStatusProps) {
   return (
     <div className="flex items-center gap-2">
       <span
+        data-testid="badge"
         className={`h-2 w-2 rounded-full ${orderStatusColorMap[status]}`}
-      ></span>
+      />
       <span className="font-medium text-muted-foreground">
         {orderStatusLabelMap[status]}
       </span>
