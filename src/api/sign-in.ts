@@ -1,6 +1,6 @@
 import { api } from '@/lib/axios'
 
-interface SignInPayload {
+export interface SignInPayload {
   email: string
 }
 
