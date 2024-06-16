@@ -2,7 +2,6 @@ import { setupWorker } from 'msw/browser'
 
 import { env } from '@/env'
 
-import { approveOrder } from '../approve-order'
 import { approveOrderMock } from './approve-order-mock'
 import { cancelOrderMock } from './cancel-order-mock'
 import { deliverOrderMock } from './deliver-order-mock'
